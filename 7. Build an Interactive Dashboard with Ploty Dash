@@ -79,7 +79,7 @@ def get_pie_chart(entered_site):
         success_failure_counts = site_data['class'].value_counts()
         fig = px.pie(site_data, 
         values=success_failure_counts.values,
-        names=['0', '1'],
+        names=success_failure_counts.index,
         title=f'Total Success Launches for site {entered_site}')
         return fig
 # TASK 4:
